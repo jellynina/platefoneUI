@@ -1,0 +1,104 @@
+.post{
+	list-style-type: none;
+	@include pie-clearfix;
+	li{
+		margin-top: 5em;
+	}
+}
+
+.post-input{
+	@include pie-clearfix;
+	display: block;
+	.id-select, .text-input{
+		display: block;
+		float: left;
+	}
+	.id-select{
+		width: 19%;
+	}
+	.text-input{
+		width: 80%;
+	}
+}
+
+.id-select{
+	input{
+		display: none;
+		&:checked{
+			+ label{
+				background-color: yellow;
+			}
+		}
+	}
+	label{
+		width: 100%;
+		display: block;
+		margin-top: .8em;
+		@include box-sizing(border-box);
+		padding: .3em;
+		&:first-of-type{
+			margin-top: 0;
+		}
+		img{
+			width: $avatar-post;
+			height: $avatar-post;
+			display: block;
+			margin: 0 auto;
+		}
+		div{
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+.text-input{
+	// border: 1px $post-input-border solid;
+	@include box-shadow(0px 0px 0px 2px $post-input-border);
+
+	height: $post-input-height;
+	position: relative;
+  &:before {
+    @include triangle(
+      $direction : left, 
+      $position  : top 4px left -25px,
+      $size: 16px,
+      $color: $post-input-border
+      
+    );
+  }
+   &:after {
+    @include triangle(
+      $direction : left, 
+      $position  : top 6px left -20px,
+      $size:	14px,
+      $color: #fff
+    );
+  }
+
+	input, textarea{
+		width: 100%;
+		display: block;
+		border: none;
+		padding: .2em 1em;
+		margin-bottom: .4em;
+
+		&:focus{
+			outline: 0;
+		}
+	}
+	textarea{
+		resize: none;
+	}
+	.btn-post{
+		width: 100%;
+		border-radius: 0;
+		margin-bottom: 0;
+		position: absolute;
+		bottom: 0;
+		&:focus{
+			outline: 0;
+		}
+	}
+}

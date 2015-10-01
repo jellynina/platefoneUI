@@ -1,0 +1,17 @@
+body{
+	padding-top: 70px;
+}
+
+.main{
+	@include pie-clearfix;
+	[class^="col-"]{
+		display: block;
+		float: left;
+	}
+	.col-mid{
+		width: 80%;
+	}
+	.col-right, .col-left{
+		width: 10%;
+	}
+}
