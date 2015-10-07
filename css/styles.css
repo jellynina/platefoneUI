@@ -8095,15 +8095,59 @@ body {
   width: 80%;
 }
 
-/* line 25, ../sass/module/_post.scss */
+/* line 24, ../sass/module/_post.scss */
+.post-read {
+  *zoom: 1;
+  display: block;
+}
+/* line 38, ../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.post-read:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 27, ../sass/module/_post.scss */
+.post-read .id-avatar, .post-read .message {
+  display: block;
+  float: left;
+}
+/* line 32, ../sass/module/_post.scss */
+.post-read .id-avatar {
+  width: 19%;
+}
+/* line 35, ../sass/module/_post.scss */
+.post-read .message {
+  width: 80%;
+}
+
+/* line 41, ../sass/module/_post.scss */
+.id-avatar img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 47, ../sass/module/_post.scss */
+.id-avatar div {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 55, ../sass/module/_post.scss */
 .id-select input {
   display: none;
 }
-/* line 28, ../sass/module/_post.scss */
+/* line 58, ../sass/module/_post.scss */
 .id-select input:checked + label {
-  background-color: yellow;
+  font-weight: bold;
+  color: #5cb85c;
 }
-/* line 33, ../sass/module/_post.scss */
+/* line 62, ../sass/module/_post.scss */
+.id-select input:checked + label img {
+  border: 2px solid #f0ad4e;
+}
+/* line 69, ../sass/module/_post.scss */
 .id-select label {
   width: 100%;
   display: block;
@@ -8113,32 +8157,32 @@ body {
   box-sizing: border-box;
   padding: .3em;
 }
-/* line 39, ../sass/module/_post.scss */
+/* line 75, ../sass/module/_post.scss */
 .id-select label:first-of-type {
   margin-top: 0;
 }
-/* line 42, ../sass/module/_post.scss */
+/* line 78, ../sass/module/_post.scss */
 .id-select label img {
   width: 80px;
   height: 80px;
   display: block;
   margin: 0 auto;
 }
-/* line 48, ../sass/module/_post.scss */
+/* line 84, ../sass/module/_post.scss */
 .id-select label div {
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 56, ../sass/module/_post.scss */
+/* line 92, ../sass/module/_post.scss */
 .text-input {
   -webkit-box-shadow: 0px 0px 0px 2px #FB4B3C;
   box-shadow: 0px 0px 0px 2px #FB4B3C;
   height: 250px;
   position: relative;
 }
-/* line 62, ../sass/module/_post.scss */
+/* line 98, ../sass/module/_post.scss */
 .text-input:before {
   top: 4px;
   left: -25px;
@@ -8151,7 +8195,7 @@ body {
   border-bottom: 16px solid transparent;
   border-top: 16px solid transparent;
 }
-/* line 71, ../sass/module/_post.scss */
+/* line 107, ../sass/module/_post.scss */
 .text-input:after {
   top: 6px;
   left: -20px;
@@ -8164,7 +8208,7 @@ body {
   border-bottom: 14px solid transparent;
   border-top: 14px solid transparent;
 }
-/* line 80, ../sass/module/_post.scss */
+/* line 116, ../sass/module/_post.scss */
 .text-input input, .text-input textarea {
   width: 100%;
   display: block;
@@ -8172,15 +8216,15 @@ body {
   padding: .2em 1em;
   margin-bottom: .4em;
 }
-/* line 87, ../sass/module/_post.scss */
+/* line 123, ../sass/module/_post.scss */
 .text-input input:focus, .text-input textarea:focus {
   outline: 0;
 }
-/* line 91, ../sass/module/_post.scss */
+/* line 127, ../sass/module/_post.scss */
 .text-input textarea {
   resize: none;
 }
-/* line 94, ../sass/module/_post.scss */
+/* line 130, ../sass/module/_post.scss */
 .text-input .btn-post {
   width: 100%;
   border-radius: 0;
@@ -8188,7 +8232,7 @@ body {
   position: absolute;
   bottom: 0;
 }
-/* line 100, ../sass/module/_post.scss */
+/* line 136, ../sass/module/_post.scss */
 .text-input .btn-post:focus {
   outline: 0;
 }
@@ -8202,5 +8246,15 @@ body {
 /* line 5, ../sass/module/_tag-cate.scss */
 .tag-category li {
   display: inline-block;
+  padding: .2em 1.2em;
   margin: .2em .4em;
+  color: #333333;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* line 14, ../sass/module/_tag-cate.scss */
+.tag-category li.active {
+  border-radius: 5px;
+  background-color: #428bca;
+  color: #fff;
 }

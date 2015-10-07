@@ -4,6 +4,16 @@
 	margin: 0 auto;
 	li{
 		display: inline-block;
+		padding: .2em 1.2em;
 		margin: .2em .4em;
+		color: $gray-dark;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	li.active{
+		border-radius: 5px;
+		background-color: $brand-primary;
+		color: #fff;
 	}
 }

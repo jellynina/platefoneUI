@@ -21,12 +21,48 @@
 	}
 }
 
+.post-read{
+	@include pie-clearfix;
+	display: block;
+	.id-avatar, .message{
+		display: block;
+		float: left;
+	}
+
+	.id-avatar{
+		width: 19%;
+	}
+	.message{
+		width: 80%;
+	}
+}
+
+.id-avatar{
+	img{
+			width: $avatar-post;
+			height: $avatar-post;
+			display: block;
+			margin: 0 auto;
+		}
+	div{
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+		}
+}
+
 .id-select{
 	input{
 		display: none;
 		&:checked{
 			+ label{
-				background-color: yellow;
+				font-weight: bold;
+				color: $brand-success;
+
+				img{
+					border: 2px solid $brand-warning;
+				}
+
 			}
 		}
 	}

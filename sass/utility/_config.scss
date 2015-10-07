@@ -5,5 +5,9 @@ $post-input-border: #FB4B3C;
 
 //== length
 
+//: posting module
 $avatar-post: 80px;
 $post-input-height: 250px;
+$post-input-triangle-top-value: 0;
+$post-input-triangle-top-before: (4 +  $post-input-triangle-top-value)px;
+$post-input-triangle-top-after: (6 +  $post-input-triangle-top-value)px;
